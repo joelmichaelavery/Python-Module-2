@@ -1,0 +1,31 @@
+Module 2 Pseudocode
+
+#This program will welcome the customer, gather the customers name, see how many feet of fiberoptic cable the customer will want installed.
+# Then the program will figure out the amount of the total cost at 0.87 dollars per foot. 
+# It will calculate this amount and output the total to the customer with their name. 
+
+Output a welcome message to the end user. Let them know that we will be asking them for their 
+company name, and the amount of cable in feet that they would like to install. 
+
+Ask for input of "Please Enter the Company Name"
+
+User inputs company name 
+
+Store the input in variable company_name
+
+Ask for input of "How many feet of fiber optic cable would you like installed?"
+
+User inputs amount of cable in feet
+
+store the input in variable cable_in_feet
+
+create variable price_per_foot and initialize to 0.87. 
+
+create variable total_cost
+
+set total_cost to price_per_foot * cable_in_feet
+
+Print message with company_name and total_cost
+
+
+
