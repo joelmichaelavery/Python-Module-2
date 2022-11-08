@@ -19,13 +19,28 @@ day!\n''')
 company_name = input("Please enter your company's name: ")
 
 #Ask for input on how many feet the customer would like and store
-cable_in_feet = input("Please enter how many feet of cable you want to install: ")
+cable_in_feet = int(input("Please enter how many feet of cable you want to install: "))
 
-#declare price_per_foot variable and set to 0.87
-price_per_foot = 0.87
+#if statement to determine price per foot if more than 100 ft byt less than 250
+if cable_in_feet > 101 and cable_in_feet < 251:
+    price_per_foot = 0.80
+
+#elif statement to determine price per foot at 0.70 per ft if 250 - 500 ft
+elif cable_in_feet > 250 and cable_in_feet < 501:
+    price_per_foot = 0.70
+
+#elif statement to determine price per foot at 0.5 per ft if over 500ft install. 
+elif cable_in_feet > 500:
+    price_per_foot = 0.50
+
+#else statement to say if none of the above cases are true, then 0.87 per ft. 
+else: 
+    price_per_foot = 0.87
+
 
 #declare variable total_cost and set to price_per_foot * cable_in_feet
 total_cost = price_per_foot * float(cable_in_feet)
+total_cost = "{:.2f}".format(total_cost) #sets the total cost to two decimals
 
 #output company name and total cost
 print(f'''Hello, {company_name.title()}, your total cost is ${total_cost} 
